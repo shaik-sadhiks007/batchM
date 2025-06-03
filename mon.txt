@@ -50,14 +50,9 @@ https ---  hypertext transfer protocol secure ---- verified website --- ssl --
 route --- which page to show
 
 
-
-
-
 dns ---- domain naming system ---- it is a name which contains the ip address
 
 does our computer has dns ??
-
-
 
 
 file:///D:/studycomrade/monday_new_batch/notepad.html --- filemanager

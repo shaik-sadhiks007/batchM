@@ -1,0 +1,10 @@
+
+html contains only static content ----- unchanged content
+
+to add the styles -  css
+
+js ---- dynamic content --- to make websites dynamic
+
+
+href --- path
+
