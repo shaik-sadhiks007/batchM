@@ -44,10 +44,10 @@
             background-color: black;
         }
 
-        h2 {
+        /* h2 {
             color: rgb(164, 219, 26);
             background-color: black;
-        }
+        } */
 
 
         /* // univeral selector  we can use ---- * or body */
@@ -67,7 +67,14 @@
             font-style: italic;
             text-align: start;
             border: 5px solid rebeccapurple;
+            /* margin : 50px */
 
+            /* margin-top: 100px;
+            margin-left: 100px; */
+
+            /* margin : top right bottom left */
+
+            margin: 100px 0px 50px 20px
         }
 
         /* // box model 
@@ -77,8 +84,64 @@
         
         */
 
+        #netflix {
 
-    
+            background-image: url('./kolhi.jpg');
+            width: 300px;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-color: black;
+            /* background-position: center; */
+            background-size: cover;
+            /* padding-left: 150px; */
+            /* text-align: center; */
+
+            display: flex;
+
+            /* use justify-content to make center in x-direction */
+            justify-content: center;
+
+            /* use align-items to make center in y-direction */
+
+            align-items: center;
+
+
+
+
+
+
+
+        }
+
+
+        #flex-prop {
+
+
+            display: flex;
+
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+            /* justify-content: center;
+
+            align-items: center; */
+
+        }
+
+        #flex-col{
+
+            display: flex;
+            flex-direction: column;
+
+            /* if you changed the direction of flex, properties also change the direction */
+
+            align-items: center;
+
+            justify-content: center;
+
+
+
+        }
     </style>
 </head>
 
@@ -108,6 +171,79 @@
     <!-- inner > id > class > tag  -->
 
     <h2 id="unique" class="sadhik" style="color: grey;"> this is h2 tag </h2>
+
+
+    <!-- <img src="./kolhi.jpg" alt="kolhi">
+    <h1>netflix</h1> -->
+
+    <div id="netflix">
+
+        <h1>netflix</h1>
+
+
+    </div>
+
+
+    <!-- flex ---- is used for alignment
+
+    when we use flex default direction is row, and it allow childs to be in the row
+     
+    
+    -->
+
+
+
+    <div id="flex-prop">
+
+        <div style="background-color: green; width: 300px; height: 100px;">
+
+            box 1
+
+        </div>
+
+        <div style="background-color: rgb(223, 79, 17); width: 300px; height: 50px;">
+
+            box 2
+        </div>
+
+        <div style="background-color: green; width: 300px; height: 100px;">
+
+            box 3
+
+        </div>
+
+    </div>
+
+
+    <div id="flex-col">
+
+        <span style="background-color: green; width: 300px; height: 100px;">
+
+            box 1
+
+        </span>
+
+        <span style="background-color: rgb(223, 79, 17); width: 300px; height: 50px;">
+
+            box 2
+        </span>
+
+        <span style="background-color: green; width: 300px; height: 100px;">
+
+            box 3
+
+        </span>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
 
 </body>
