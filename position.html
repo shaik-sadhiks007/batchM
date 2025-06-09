@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position props</title>
+    <style>
+        body {
+
+            height: 1500px;
+        }
+
+        .box {
+
+            width: 300px;
+            height: 100px;
+
+        }
+
+        .static {
+            background-color: rgb(115, 115, 226);
+            color: red;
+        }
+
+        .normal {
+            background-color: rgb(128, 226, 115);
+            color: rgb(114, 6, 222);
+        }
+
+        .relative {
+            position: relative;
+            top: 50px;
+            left: 100px;
+            background-color: rgb(226, 115, 219);
+            color: rgb(221, 223, 119);
+        }
+
+        .fixed {
+
+            position: fixed;
+            top: 0;
+            background-color: rgb(220, 222, 97);
+            color: rgb(240, 12, 65);
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: rgb(13, 13, 10);
+            color: rgb(255, 255, 255);
+        }
+
+        .absolute {
+            background-color: rgb(13, 115, 210);
+            color: rgb(203, 17, 17);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>this is position props class</h1>
+
+    <!-- position props means ntg but placing the element wherever u want -->
+
+
+    <!-- // by default html and css follows the order and based on that it will position is static positioning -->
+
+
+    <!-- in the position props we have 5 types
+
+    1. static position --- by default it will positioned by order
+
+    2. relative --- if u move the box using default position known as relative
+
+    3. fixed --- it will remove the position and allow other html element and our fixed element is fixed at the position u have given 
+
+    4. sticky --- it will act as fixed when box hits the position u given
+
+    5. absolute --- relative works on default position.
+
+    but absolute works on the relative postion
+     
+    absolute position mainly useful when u have the parent with relative position
+    -->
+    <div class="box static">
+
+        this is static box
+
+    </div>
+
+    <div class="box relative">
+
+        this is relative box
+
+    </div>
+
+    <div class="box fixed">
+
+        this is fixed box
+
+    </div>
+
+    <!-- <a href="./semantic.html">contact</a>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/54IOHIYap7c?si=pJGl2-xHv7GRQ6v-"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+    <div class="box sticky">
+
+        this is sticky box
+
+    </div>
+
+    <div class="box normal" style="width: 500px;">
+
+        this is normal box
+
+    </div>
+
+    <div style="position: relative; top : 50px;">
+
+        <div class="box absolute" style="position: absolute; top:50px">
+            this is absolute box
+        </div>
+
+    </div>
+
+</body>
+
+</html>
