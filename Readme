@@ -1,0 +1,156 @@
+# JavaScript Data Types and Methods
+
+## 🔹 1. String Methods
+
+```js
+let str = "  Hello World!  ";
+```
+
+### Common String Methods:
+
+* `length` – `str.length`
+* `toUpperCase()` – `str.toUpperCase()`
+* `toLowerCase()` – `str.toLowerCase()`
+* `trim()` – `str.trim()`
+* `includes()` – `str.includes("World")`
+* `startsWith()` – `str.startsWith("  He")`
+* `endsWith()` – `str.endsWith("!")`
+* `indexOf()` – `str.indexOf("o")`
+* `lastIndexOf()` – `str.lastIndexOf("o")`
+* `charAt()` – `str.charAt(1)`
+* `substring()` – `str.substring(2, 7)`
+* `slice()` – `str.slice(-6)`
+* `split()` – `str.trim().split(" ")`
+* `replace()` – `str.replace("l", "*")`
+* `replaceAll()` – `str.replaceAll("l", "*")`
+* `repeat()` – `"Hi".repeat(3)`
+
+---
+
+## 🔹 2. Number Methods
+
+```js
+let num = 123.456;
+```
+
+### Common Number Methods:
+
+* `toString()` – `num.toString()`
+* `toFixed(n)` – `num.toFixed(2)`
+* `toPrecision(n)` – `num.toPrecision(4)`
+* `toExponential()` – `num.toExponential(2)`
+
+### Math Methods:
+
+* `Math.round()` – `Math.round(4.6)`
+* `Math.floor()` – `Math.floor(4.9)`
+* `Math.ceil()` – `Math.ceil(4.1)`
+* `Math.abs()` – `Math.abs(-9)`
+* `Math.pow()` – `Math.pow(2, 3)`
+* `Math.sqrt()` – `Math.sqrt(16)`
+* `Math.random()` – `Math.random()`
+* `Math.max()` – `Math.max(1, 5, 3)`
+* `Math.min()` – `Math.min(1, 5, 3)`
+
+---
+
+## 🔹 3. Boolean Methods
+
+Booleans don’t have many methods, but can be evaluated:
+
+```js
+Boolean(0)      // false
+Boolean("hi")   // true
+```
+
+Logical operations:
+
+* `&&`, `||`, `!`
+
+---
+
+## 🔹 4. Array Methods
+
+```js
+let arr = [1, 2, 3, 4];
+```
+
+### Mutating Methods:
+
+* `push()` – Add to end
+* `pop()` – Remove last
+* `shift()` – Remove first
+* `unshift()` – Add to start
+* `splice()` – Add/remove by index
+* `sort()` – Sort in-place
+* `reverse()` – Reverse order
+
+### Non-Mutating Methods:
+
+* `map()` – Transform each item
+* `filter()` – Return matching items
+* `reduce()` – Accumulate values
+* `find()` – First match
+* `findIndex()` – Index of match
+* `every()` – All match
+* `some()` – Any match
+* `includes()` – Check if exists
+* `indexOf()` – Find index
+* `join()` – Combine to string
+* `slice()` – Copy subarray
+* `concat()` – Merge arrays
+* `flat()` – Flatten arrays
+* `forEach()` – Loop through
+
+---
+
+## 🔹 5. Object Methods
+
+```js
+let obj = { name: "Sam", age: 30 };
+```
+
+### Useful Object Methods:
+
+* `Object.keys(obj)` – `["name", "age"]`
+* `Object.values(obj)` – `["Sam", 30]`
+* `Object.entries(obj)` – `[["name", "Sam"], ["age", 30]]`
+* `Object.assign({}, obj)` – Copy object
+* `Object.hasOwn(obj, key)` – Check key
+* `Object.freeze(obj)` – Prevent changes
+* `Object.seal(obj)` – Prevent add/remove
+
+---
+
+## 🔹 6. Function Methods
+
+```js
+function greet() { return "Hi"; }
+```
+
+* `call()` – Call with `this` and args
+* `apply()` – Same as `call()`, but with array
+* `bind()` – Returns new function with bound `this`
+
+---
+
+## 🔹 7. Date Methods
+
+```js
+let now = new Date();
+```
+
+* `getFullYear()` – Year
+* `getMonth()` – Month (0–11)
+* `getDate()` – Day of month
+* `getDay()` – Day of week
+* `getHours()` – Hour
+* `getMinutes()` – Minute
+* `toISOString()` – ISO format
+* `toLocaleDateString()` – Local date
+* `toLocaleTimeString()` – Local time
+* `setFullYear()` – Set year, etc.
+
+---
+
+Use this as a quick reference to master JavaScript's core data types and operations.
