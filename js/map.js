@@ -144,8 +144,4 @@ console.log("result", result)
 
 
 
-
-
-
-
 console.log('js is ended')
