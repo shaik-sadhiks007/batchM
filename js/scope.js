@@ -55,6 +55,7 @@ if (true) {
 }
 
 
+
 function difference() {
 
     let x = 1
@@ -124,10 +125,13 @@ fun1()
 
 
 
-// var --- functional scope
+// var --- functional scope --- 
 
 // let and const ---- block scope
 
+// fun ---- 133 started , 152 ended
+
+// block --- 137 started , 145 ended
 
 function keywordTest() {
 
@@ -152,7 +156,7 @@ function keywordTest() {
 
 
 
-// keywordTest()
+keywordTest()
 
 
 
