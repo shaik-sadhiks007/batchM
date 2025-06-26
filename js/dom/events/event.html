@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #divTag {
+
+            width: 300px;
+            height: 100px;
+            background-color: rgb(212, 93, 93);
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event class</h1>
+
+    <button onclick="sadhik()"> button </button>
+
+    <div id="divTag" onmouseenter="divfunction()">
+        box 1
+    </div>
+
+    <script>
+        console.log('js is started');
+
+
+        // events and event listeners
+
+        // what is an event ?
+
+        // event is a action that happens in the browser (every user action is a event)
+
+        // events types :
+
+        // 1. onclick
+        // 2. onchange ---- input change ---- input tag only
+        // 3. mouseenter
+        // 4. mouseout
+        // 5. dbclick
+        // 6. keydown
+        // 7. keyup
+        // 8. oncopy
+        // 9. onpaste
+        // 10.onsubmit
+
+
+        // 2 ways to apply the events
+
+        // 1. by using html itself
+
+        // 2. by using the js 
+
+
+        // note : click is a event and function call is a event listener
+
+
+
+        let a = 5
+
+        console.log(a,'a')
+
+        a = 10; 
+
+
+        console.log(a,'updated')
+
+
+
+        let divTag = document.getElementById("divTag");
+
+        console.log(divTag,'divtag')
+
+        function divfunction() {
+
+            console.log('div function triggered')
+            divTag.style.backgroundColor = 'green'
+        }
+
+
+        function sadhik() {
+            console.log('u click on the button')
+        }
+
+        
+
+
+
+
+        console.log('js is ended');
+    </script>
+</body>
+
+</html>
