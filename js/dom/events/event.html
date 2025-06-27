@@ -21,9 +21,11 @@
 
     <button onclick="sadhik()"> button </button>
 
-    <div id="divTag" onmouseenter="divfunction()">
+    <div id="divTag" onmouseenter="divfunction()" onmouseout="divsecondfunction()">
         box 1
     </div>
+
+    <input type="text" id="inputTag" placeholder="enter the username" onkeyup="handleInputField()">
 
     <script>
         console.log('js is started');
@@ -37,13 +39,13 @@
 
         // events types :
 
-        // 1. onclick
+        // 1. onclick --- for buttons 
         // 2. onchange ---- input change ---- input tag only
-        // 3. mouseenter
-        // 4. mouseout
+        // 3. mouseenter --- if i am in the box area
+        // 4. mouseout ---- i am leaving the box area
         // 5. dbclick
-        // 6. keydown
-        // 7. keyup
+        // 6. keydown --- key down
+        // 7. keyup --- key up
         // 8. oncopy
         // 9. onpaste
         // 10.onsubmit
@@ -60,33 +62,55 @@
 
 
 
+
         let a = 5
 
-        console.log(a,'a')
+        console.log(a, 'a')
 
-        a = 10; 
+        a = 10;
 
 
-        console.log(a,'updated')
+        console.log(a, 'updated')
 
+
+        let inputTag = document.getElementById("inputTag")
+
+        function handleInputField() {
+            console.log('input field event is called',inputTag)
+        }
 
 
         let divTag = document.getElementById("divTag");
 
-        console.log(divTag,'divtag')
+        console.log(divTag, 'divtag')
 
         function divfunction() {
-
             console.log('div function triggered')
             divTag.style.backgroundColor = 'green'
         }
 
-
-        function sadhik() {
-            console.log('u click on the button')
+        function divsecondfunction() {
+            divTag.style.backgroundColor = 'yellow'
         }
 
-        
+
+        function sadhik() {
+
+            // dialog boxes
+
+            // 1. alert
+            // 2. confirm
+            // 3. prompt
+            // alert('u click on the button'); // nothing warning
+
+            // confirm('are u above 18 ?') // it ask the yes or no type question
+
+            let age = prompt("enter the age");
+
+            console.log(age, 'age')
+        }
+
+
 
 
 
