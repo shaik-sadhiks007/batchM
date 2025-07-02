@@ -68,9 +68,8 @@
 
         // convert the json to js obj;
 
-        let todos = JSON.parse(localStorage.getItem('todos')) || [] ;
+        let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
-        console.log(todos,'todos in the outside');
 
         let inputTag = document.getElementById('inputTag');
 
@@ -90,11 +89,14 @@
 
                 <div class='d-flex justify-content-center align-items-center'>
 
-                <input type="checkbox">
+                <input type="checkbox" ${ele.completed ? "checked" : ""} 
+                
+                onChange="handleInputChange(${index})"
+                >
 
-                <span> ${ele.title} </span>
+                <span class='${ele.completed ? 'text-decoration-line-through' : ''}'> ${ele.title} </span>
 
-                <button>edit</button>
+                <button onclick="handleEdit(${index})">edit</button>
 
                 <button onclick="handleDelete(${index})">delete</button>
 
@@ -123,19 +125,27 @@
         }
 
 
+
+
         function addTodos() {
 
+            if (inputTag.value.trim() !== '') {
 
-            todos.push({
-                title: inputTag.value,
-                completed: false
-            })
+                todos.push({
+                    title: inputTag.value,
+                    completed: false
+                })
 
-            console.log(todos, 'todos')
+                console.log(todos, 'todos')
 
-            showTodos()
+                inputTag.value = '' // clear the input tag
 
-            addToLocalStorage()
+                showTodos()
+
+                addToLocalStorage()
+
+            }
+
 
 
 
@@ -145,6 +155,8 @@
 
         function addToLocalStorage() {
 
+            //[obj obj]
+
             localStorage.setItem('todos', JSON.stringify(todos)) // js obj to json
 
 
@@ -153,20 +165,48 @@
 
 
         function handleDelete(pos) {
-            console.log('delete fun',pos)
+            console.log('delete fun', pos)
 
             // todos.splice(start,how many elements to delete, add elements (optional))
 
-            todos.splice(pos,1);
+            todos.splice(pos, 1);
 
-            showTodos();
+            showTodos(); // to update the html content
+
+            addToLocalStorage() // to update the localstorage data
+
+
+        }
+
+        function handleInputChange(pos) {
+
+            todos[pos].completed = !todos[pos].completed;
+
+            showTodos()
 
             addToLocalStorage()
 
 
         }
 
+        function handleEdit(pos) {
 
+            console.log(pos, 'edit');
+
+            let updateTitle = prompt("enter the updated todo");
+
+            console.log(updateTitle, 'title')
+
+            if (updateTitle.trim() !== '') {
+                todos[pos].title = updateTitle;
+
+                showTodos()
+
+                addToLocalStorage()
+            }
+
+
+        }
         showTodos()
 
 
