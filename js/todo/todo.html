@@ -68,7 +68,26 @@
 
         // convert the json to js obj;
 
-        let todos = JSON.parse(localStorage.getItem('todos')) || [];
+        // let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+        let todos = []
+
+        async function fetchTodos() {
+
+            let response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+
+            console.log(response, 'res')
+
+            let data = await response.json() // convert data into js obj
+
+            todos = data
+
+            showTodos()
+
+
+        }
+
+        fetchTodos()
 
 
         let inputTag = document.getElementById('inputTag');

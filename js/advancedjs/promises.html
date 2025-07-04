@@ -29,13 +29,13 @@
         //     console.log('this will run after 2 seconds')
         // }, 4000)
 
-        // what is a promise --- it time taking process --- i will surely give the data , i don't know whether it failure state or sucessful state
+        // what is a promise --- it time taking process (the data is not here) --- i will surely give the data , i don't know whether it failure state or sucessful state
 
         let output = new Promise((resolve, reject) => {
 
-            let state = false 
+            let state = true
 
-            if(state) {
+            if (state) {
                 resolve("this is sucessful")
             } else {
                 reject("this is a failure")
@@ -46,17 +46,36 @@
         // to retrive the successful data you have to use then function
         // to get the failure data you have to use the catch
 
-        output.then(
-            (result) => {
-                console.log(result,'sucess in then fun')
-            }
-        ).catch(
-            (error) => {
-                console.log(error,'error in catch fun')
-            }
-        )
+        // output.then(
+        //     (result) => {
+        //         console.log(result,'sucess in then fun')
+        //     }
+        // ).catch(
+        //     (error) => {
+        //         console.log(error,'error in catch fun')
+        //     }
+        // )
 
-        console.log(output,'output')
+
+        output
+            .then(
+
+                // sucessful data
+                (result) => {
+
+                    console.log('result',result)
+
+                }
+
+            )
+            .catch(
+                (error) => {
+                    console.log(error,"errror")
+                }
+            )
+
+
+        console.log(output, 'output') // promise
 
         // console.log(" line after timeout function")
 
