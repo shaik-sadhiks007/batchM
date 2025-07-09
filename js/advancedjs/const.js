@@ -5,7 +5,7 @@ const name = 'sadhik'
 
 // name = 'hemanth'
 
-console.log(name,'name')
+// console.log(name,'name')
 
 const obj = {
     username : 'sadhik',
@@ -18,6 +18,11 @@ const obj = {
 //     username : 'bhanu',
 //     age : 80
 // }
+
+obj = {
+    car : 'bmw',
+    year : 2023
+}
 
 
 // obj.username = 'hemanth'

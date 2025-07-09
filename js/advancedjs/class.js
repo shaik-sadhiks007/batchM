@@ -21,6 +21,7 @@
 
 class Car {
 
+    // constructor is a special function which is called when the class obj is created
     constructor(name,year) {
 
         this.carname = name
@@ -62,7 +63,7 @@ class Car {
 // object is a instance of the class,
 
 
-let myCar = new Car('tesla',2020)
+let myCar = new Car('tata',2022) // class call --- object creation
 
 // myCar.setthevariables('tesla', 2020)
 
